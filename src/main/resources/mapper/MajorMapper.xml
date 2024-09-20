@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.structfactorytest.dao.MajorMapper">
+
+    <resultMap type="com.my.structfactorytest.entity.Major" id="MajorMap">
+        <result property="mId" column="m_id" jdbcType="BIGINT"/>
+        <result property="mCode" column="m_code" jdbcType="VARCHAR"/>
+        <result property="mName" column="m_name" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="DATE"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="MajorMap">
+    select * from major
+    where 1 = 1
+    </select>
+
+
+
+
+
+
+</mapper>

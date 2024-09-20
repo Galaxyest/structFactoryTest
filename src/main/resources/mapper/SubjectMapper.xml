@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.my.structfactorytest.dao.SubjectMapper">
+
+    <resultMap type="com.my.structfactorytest.entity.Subject" id="SubjectMap">
+        <result property="sId" column="s_id" jdbcType="BIGINT"/>
+        <result property="mId" column="m_id" jdbcType="BIGINT"/>
+        <result property="mName" column="m_name" jdbcType="VARCHAR"/>
+        <result property="sCode" column="m_code" jdbcType="VARCHAR"/>
+        <result property="sName" column="s_name" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="DATE"/>
+
+    </resultMap>
+
+    <insert id="addSubject">
+    INSERT INTO `subject`(
+        m_id,m_name,m_name,m_code,s_name
+    )
+    VALUES (
+            #{mId},#{mName},#{sCode},#{sName}
+        )
+    </insert>
+
+</mapper>
+
+
